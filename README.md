@@ -1,4 +1,5 @@
 # TCPWave-Postman-Integration
+### TCPWave uses Postman tool for RestAPI Automation testing
 TCPWave uses the Postman tool over other RESTful API testing tools because of the following:
 
 • Accessibility - To use Postman, you are required to log-in to the respective accounts making it easy to access files anytime, anywhere if a Postman application is installed on the computer.
@@ -17,7 +18,7 @@ TCPWave uses the Postman tool over other RESTful API testing tools because of th
 
 •	Continuous Integration - With its ability to support continuous integration, development practices are maintained.
 
-### working with collection files
+### Working with Postman collection files
 1. Import JSON environment file. You can declare global variables in that file.
 
 2. The imported global variables are as shown:
@@ -33,4 +34,4 @@ TCPWave uses the Postman tool over other RESTful API testing tools because of th
  ![](images/getCallExample.png)
  
 ### Sample Post Call  
- ![](images/postCallExample.png)
+ ![](images/PostCallExample.png)
