@@ -19,8 +19,18 @@ TCPWave uses the Postman tool over other RESTful API testing tools because of th
 
 ### working with collection files
 1. Import JSON environment file. You can declare global variables in that file.
+
 2. The imported global variables are as shown:
    ![](images/global.png)
 
+3. TCPWave uses Token-Based Authentication to execute the Postman calls.
 
-![](images/getCallExample.png)
+4. For token-based authentication, you need to create the session token in the TCPWave IPAM and copy-paste the value in the environment file token field value.
+
+5.For another Global variable base-URL you are required to provide the address of the system. The address of the system belongs to the system on which execution is done. (URL: https://www.tcpwave.com:7891/tims/rest)
+
+### Sample Get Call  
+ ![](images/getCallExample.png)
+ 
+### Sample Get Call  
+ ![](images/postCallExample.png)
