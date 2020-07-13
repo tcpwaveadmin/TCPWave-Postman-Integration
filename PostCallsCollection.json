@@ -1,0 +1,1901 @@
+{
+	"info": {
+		"_postman_id": "684510f2-6a6a-4042-b0e0-d38bb1675344",
+		"name": "PostCalls Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Organization ADD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\",\"name\":\"PostmanOrg\",\"enable_root_zone\":1,\"description\":\"\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/organization/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"organization",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organization Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\",\"name\":\"PostmanOrg\",\"enable_root_zone\":1,\"description\":\"Updated\",\"oldName\":\"PostmanOrg\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/organization/update",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"organization",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Domain Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"postmandomain.com\",\"description\":\"\",\"created_by\":\"22321\",\"organization_id\":\"\",\"organization_name\":\"PostmanOrg\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/domain/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"domain",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Domain Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"postmandomain.com\",\"old_name\":\"postmandomain.com\",\"description\":\"updated\",\"updateSubDomain\":false,\"updated_by\":\"22321\",\"organization_id\":\"\",\"organization_name\":\"PostmanOrg\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/domain/update",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"domain",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DHCP Policy Template Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"template_name\":\"postmanpolicy\",\"description\":\"\",\"entity_type_code\":\"POLICY\",\"server_type_code\":\"DHCP\",\"array_params\":[{\"display_name\":\"Default Lease time\",\"value\":\"3700\"},{\"display_name\":\"Ping Check\",\"value\":\"true\"}],\"organization_name\":\"PostmanOrg\",\"created_by\":\"22321\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/templates/dhcp-template-create",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"templates",
+						"dhcp-template-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DHCP Option Template Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"template_name\":\"postmandhcptemp\",\"description\":\"\",\"entity_type_code\":\"OPTION\",\"server_type_code\":\"DHCP\",\"array_params\":[{\"display_name\":\"Subnet Mask (1)\",\"value\":\"Same as in subnet profile\",\"group_name\":\"standard option\"},{\"display_name\":\"Router (3)\",\"value\":\"Same as in subnet profile\",\"group_name\":\"standard option\"},{\"display_name\":\"Domain Name (15)\",\"value\":\"Same as the primary domain in subnet profile\",\"group_name\":\"standard option\"}],\"organization_name\":\"PostmanOrg\",\"created_by\":\"22321\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/templates/dhcp-template-create",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"templates",
+						"dhcp-template-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"address\":\"129.5.0.0\",\"mask_length\":\"16\",\"organization_id\":\"\",\"name\":\"PostmanNetwork\",\"description\":\"\",\"createRevZone\":\"yes\",\"dmzVisible\":\"no\",\"dnssec_enable\":\"no\",\"nsec_option\":\"NSEC3\",\"monitoringService\":\"no\",\"enable_discovery\":\"no\",\"discovery_template\":\"\",\"region\":\"\",\"percentageFull\":100,\"email_check\":1,\"snmp_check\":0,\"log_check\":0,\"rrs\":[],\"zoneTemplateId\":\"\",\"zoneTemplateName\":null,\"addr1\":\"129\",\"addr2\":\"5\",\"addr3\":\"0\",\"addr4\":\"0\",\"organization_name\":\"EARTH\",\"extensions\":[]}"
+				},
+				"url": {
+					"raw": "{{base-url}}/network/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"network",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subnet Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"addr1\":\"129\",\"addr2\":\"5\",\"addr3\":\"0\",\"addr4\":\"0\",\"network_id\":\"\",\"network_mask\":\"16\",\"name\":\"PostmanSubnet\",\"mask_length\":\"16\",\"description\":\"\",\"vlan_id\":\"\",\"location_id\":null,\"vrf_id\":\"\",\"sharedNetwork\":\"\",\"dhcpFailoverPeer\":\"\",\"dns_appliances\":\"\",\"subnet_group_id\":\"\",\"primary_domain\":\"afcc.com\",\"created_by\":\"22321\",\"organization_name\":\"EARTH\",\"subnetTemplateName\":null,\"enable_discovery\":\"no\",\"discovery_template\":null,\"reclaim_objects\":\"no\",\"createRevZone\":\"no\",\"monitoringService\":\"no\",\"dmzVisible\":\"no\",\"dnssec_enable\":\"no\",\"zoneTemplateName\":null,\"nsec_option\":\"NSEC3\",\"extensions\":[],\"cloudProviderId\":\"\",\"routerAddress\":\"129.5.0.1\",\"primary_dhcp_server\":null,\"template_id\":null,\"network_address\":\"129.5.0.0\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/subnet/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"subnet",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Object Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"TCPWave00005Remote\",\"domain_id\":\"\",\"class_code\":\"TCPWave Remote\",\"alloc_type\":\"1\",\"mac\":\"\",\"ttl\":\"1200\",\"rsrv_exp_dt\":\"\",\"objectview\":\"\",\"option_template_name\":\"\",\"dhcp_server\":\"\",\"update_ns_a\":true,\"update_ns_ptr\":true,\"dyn_update_rrs_a\":true,\"dyn_update_rrs_ptr\":true,\"dyn_update_rrs_cname\":true,\"dyn_update_rrs_mx\":true,\"cloudInstanceTemplate\":\"\",\"description\":\"\",\"change_control_team\":\"\",\"end_of_life\":\"\",\"room\":\"\",\"floor\":\"\",\"systemLocation\":\"\",\"terminal_server_kvm\":\"\",\"switch_name\":\"\",\"port_name\":\"\",\"duplex_name\":\"\",\"serial_num\":\"\",\"managed_by\":\"\",\"monitored_by\":\"\",\"vmware_port\":\"\",\"vmware_user_name\":\"twcadm\",\"vmware_password\":\"zxcv1234\",\"addr1\":\"129\",\"addr2\":\"5\",\"addr3\":\"0\",\"addr4\":\"3\",\"subnet_id\":\"\",\"subnet_address\":\"129.5.0.0\",\"domain_name\":\"afcc.com\",\"rrs\":[],\"organization_id\":\"\",\"organization_name\":\"EARTH\",\"created_by\":\"22321\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Server Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"server_type\":\"BIND AUTH\",\"stealthServer\":0,\"authAsCache\":\"no\",\"internal_cache_server\":1,\"dmzVisible\":0,\"autoDNSDR\":null,\"autoRestoreConf\":0,\"enableDnsOverTLS\":\"no\",\"v4_ipaddress\":\"129.5.0.3\",\"name\":\"TCPWave00005Remote\",\"timeZone\":\"GMT (GMT)\",\"dns_server_template_id\":\"\",\"dns_options_template_id\":\"\",\"description\":\"\",\"organization_name\":\"EARTH\",\"snmpConfig\":\"{\\\"trapSink1\\\":\\\"2.2.2.2\\\",\\\"trapSink2\\\":\\\"3.3.3.3\\\",\\\"communityString\\\":\\\"zxcv1234\\\",\\\"systemLocation\\\":\\\"\\\",\\\"systemContact\\\":\\\"\\\",\\\"systemName\\\":\\\"TCPWave00005Remote.postmandomain.com\\\",\\\"processes\\\":\\\"ntpd-1/dns-1/sshd-1/monit-1/syslog-ng-1/dhcpd-1\\\"}\",\"enableSNMPv3\":false,\"systemResources\":\"{\\\"for_1min\\\":\\\"4\\\",\\\"for_5min\\\":\\\"2\\\",\\\"for_user\\\":\\\"70\\\",\\\"for_system\\\":\\\"30\\\",\\\"for_wait\\\":\\\"20\\\",\\\"system_memory_usage\\\":\\\"75\\\"}\",\"monitoringService\":\"yes\",\"created_by\":\"22321\",\"banner\":\"The default value of Banner configuration for DNS and DHCP appliances.\",\"ldapSSHConfig\":\"{\\\"enable\\\":false}\",\"ntpConfig\":\"1.1.1.1\",\"syslogNgConfig\":{\"globalOptions\":\"{\\\"timewaitdead\\\":\\\"60\\\",\\\"timetoidle\\\":\\\"60\\\",\\\"messagetoBuffer\\\":\\\"60\\\",\\\"twstatic\\\":\\\"600\\\",\\\"noofMsg\\\":\\\"1000\\\",\\\"maxSize\\\":\\\"65536\\\",\\\"logtime\\\":\\\"true\\\"}\",\"sourcesData\":[{\"name\":\"s_sys\",\"allSources\":[{\"type\":\"internal\"},{\"type\":\"system\"}],\"sourceTypes\":\"internal, system\"}],\"filtersData\":[{\"name\":\"f_default\",\"condition\":\"level(info..emerg) and not (facility(mail) or facility(authpriv) or facility(cron))\",\"category\":\"complex\"}],\"destinationData\":[{\"name\":\"d_mesg\",\"typeSNG\":\"File\",\"logDestGivenValSNG\":\"/var/log/messages\",\"syncAfterEachMsg\":false}],\"targetsData\":[{\"source\":\"s_sys\",\"logdestination\":\"d_mesg\",\"filter\":\"f_default\"}]},\"nicsConfig\":{\"nics\":\"[]\",\"syncStatus\":0},\"rtTablesJson\":\"[]\",\"routingType\":\"none\",\"dns64List\":[],\"idracSnmpCommunity\":\"no-@--@--@-\",\"snmpAcl\":\"\",\"resolverData\":\"{\\\"ns1\\\":\\\"8.8.8.8\\\",\\\"ns2\\\":\\\"\\\",\\\"ns3\\\":\\\"\\\",\\\"ns4\\\":\\\"\\\",\\\"search1\\\":\\\"\\\",\\\"search2\\\":\\\"\\\",\\\"search3\\\":\\\"\\\",\\\"search4\\\":\\\"\\\",\\\"search5\\\":\\\"\\\",\\\"search6\\\":\\\"\\\"}\",\"dns_server_template_name\": \"BIND AUTH Default Server Template\",\"dns_options_template_name\": \"BIND AUTH Default Template\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnsserver/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnsserver",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DHCP Server Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"server\":{\"autoRestoreConf\":0,\"v4_ipaddress\":\"129.5.0.3\",\"name\":\"TCPWave00005Remote\",\"domain_name\":\"afcc.com\",\"timeZone\":\"GMT (GMT)\",\"description\":\"\",\"organization_name\":\"EARTH\",\"monitoringService\":\"yes\",\"updated_by\":\"22321\",\"dhcp_policy_template_name\":\"Default DHCP Policy Template\",\"banner\":\"The default value of Banner configuration for DNS and DHCP appliances.\",\"snmpConfig\":\"{\\\"trapSink1\\\":\\\"2.2.2.2\\\",\\\"trapSink2\\\":\\\"3.3.3.3\\\",\\\"communityString\\\":\\\"zxcv1234\\\",\\\"systemLocation\\\":\\\"\\\",\\\"systemContact\\\":\\\"\\\",\\\"systemName\\\":\\\"TCPWave00005Remote.postmandomain.com\\\",\\\"processes\\\":\\\"ntpd-1/dns-1/sshd-1/monit-1/syslog-ng-1/dhcpd-1\\\"}\",\"enableSNMPv3\":false,\"resolverData\":\"{\\\"ns1\\\":\\\"8.8.8.8\\\",\\\"ns2\\\":\\\"\\\",\\\"ns3\\\":\\\"\\\",\\\"ns4\\\":\\\"\\\",\\\"search1\\\":\\\"\\\",\\\"search2\\\":\\\"\\\",\\\"search3\\\":\\\"\\\",\\\"search4\\\":\\\"\\\",\\\"search5\\\":\\\"\\\",\\\"search6\\\":\\\"\\\"}\",\"systemResources\":\"{\\\"for_1min\\\":\\\"4\\\",\\\"for_5min\\\":\\\"2\\\",\\\"for_user\\\":\\\"70\\\",\\\"for_system\\\":\\\"30\\\",\\\"for_wait\\\":\\\"20\\\",\\\"system_memory_usage\\\":\\\"75\\\"}\",\"ldapSSHConfig\":\"{\\\"enable\\\":false}\",\"syslogNgConfig\":{\"globalOptions\":\"{\\\"timewaitdead\\\":\\\"60\\\",\\\"timetoidle\\\":\\\"60\\\",\\\"messagetoBuffer\\\":\\\"60\\\",\\\"twstatic\\\":\\\"600\\\",\\\"noofMsg\\\":\\\"1000\\\",\\\"maxSize\\\":\\\"65536\\\",\\\"logtime\\\":\\\"true\\\"}\",\"sourcesData\":[{\"name\":\"s_sys\",\"allSources\":[{\"type\":\"internal\"},{\"type\":\"system\"}],\"sourceTypes\":\"internal, system\"}],\"filtersData\":[{\"name\":\"f_default\",\"condition\":\"level(info..emerg) and not (facility(mail) or facility(authpriv) or facility(cron))\",\"category\":\"complex\"}],\"destinationData\":[{\"name\":\"d_mesg\",\"typeSNG\":\"File\",\"logDestGivenValSNG\":\"/var/log/messages\",\"syncAfterEachMsg\":false}],\"targetsData\":[{\"source\":\"s_sys\",\"logdestination\":\"d_mesg\",\"filter\":\"f_default\"}]},\"ntpConfig\":\"1.1.1.1\",\"idracSnmpCommunity\":\"no-@--@--@-\",\"snmpAcl\":\"\",\"server_type\":\"DHCP\",\"created_by\":\"22321\"}}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dhcpserver/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dhcpserver",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subnet Edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"subnet\":{\"name\":\"PostmanSubnet\",\"location_id\":null,\"subnet_group_id\":null,\"vlan_id\":\"\",\"vrf_name\":\"None\",\"sharedNetwork\":\"\",\"dhcpFailoverPeer\":\"\",\"discovery_template\":null,\"enable_discovery\":\"no\",\"reclaim_objects\":\"no\",\"schedule_reclaim\":\"no\",\"description\":\"Updated\",\"primary_domain\":\"afcc.com\",\"routerAddress\":\"129.5.0.1\",\"organization_name\":\"EARTH\",\"primary_dhcp_server_address\":\"129.5.0.3\",\"template_name\":\"Citi-Data-Template-000\",\"dns_appliances\":\"\",\"extensions\":[]},\"address\":[\"129.5.0.0\"]}"
+				},
+				"url": {
+					"raw": "{{base-url}}/subnet/edit",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"subnet",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scopes Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"update_ns_a\":true,\"update_ns_ptr\":true,\"dyn_update_rrs_a\":true,\"dyn_update_rrs_cname\":true,\"dyn_update_rrs_ptr\":true,\"dyn_update_rrs_mx\":true,\"ttl\":\"1200\",\"scope\":{\"class_code\":\"Laptop\",\"description\":\"\",\"organization_name\":\"EARTH\",\"primary_dhcp_server\":\"TCPWave00005Remote\",\"allocation_type\":\"dynamic\",\"created_by\":\"22321\",\"template_id\":46844,\"template_name\":\"Citi-Data-Template-000\",\"allowClassesArray\":[],\"denyClassesArray\":[],\"addressRanges\":[{\"startIP\":\"129.5.0.8\",\"endIP\":\"129.5.0.13\"}]},\"subnetId\":785059,\"subnetAddress\":\"129.5.0.0\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/scope/create",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"scope",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scopes Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"subnet_id\":\"\",\"addressArray\":[\"129.5.0.8\",\"129.5.0.9\",\"129.5.0.10\",\"129.5.0.11\",\"129.5.0.12\",\"129.5.0.13\"],\"updated_by\":\"22321\",\"routersArray\":[],\"organization_name\":\"EARTH\",\"isDeleterrsChecked\":1}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/delete-multiple",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"delete-multiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone Template Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"template_name\":\"PostmanZoneTemp\",\"description\":\"\",\"entity_type_code\":\"ZONE\",\"server_type_code\":\"GENERICDNS\",\"organization_name\":\"EARTH\",\"array_templates\":[{\"param_name\":\"email-addr\",\"value\":\"pza@gmail.com\"},{\"param_name\":\"default-ttl\",\"numeric_value\":\"1200\"},{\"param_name\":\"refresh\",\"numeric_value\":\"21600\"},{\"param_name\":\"retry\",\"numeric_value\":\"3600\"},{\"param_name\":\"expire\",\"numeric_value\":\"604800\"},{\"param_name\":\"negative-cache-ttl\",\"numeric_value\":\"86400\"},{\"param_name\":\"serial\",\"value\":\"DATE\"},{\"param_name\":\"allow-notify\",\"aclList\":[{\"exclude\":\"0\",\"value\":\"129.5.0.3\",\"sequence\":1}]},{\"param_name\":\"allow-query\",\"aclList\":null},{\"param_name\":\"allow-transfer\",\"aclList\":null},{\"param_name\":\"allow-update\",\"value\":\"\"},{\"param_name\":\"master-dns-servers\",\"value\":\"169.181.11.243\"},{\"param_name\":\"slave-dns-servers\",\"value\":\"\"},{\"param_name\":\"customAcls\",\"value\":\"\"},{\"param_name\":\"windows-dns-servers\",\"value\":\"\"}],\"created_by\":\"22321\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/templates/create",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"templates",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"organization_id\":\"\",\"name\":\"postman.com\",\"template_name\":\"PostmanZoneTemp\",\"importCloudRR\":true,\"description\":\"\",\"dnssec_enable\":\"no\",\"nsec_option\":\"NSEC3\",\"restrictedZone\":\"no\",\"monitoringService\":\"yes\",\"dmzVisible\":\"no\",\"activeDirectoryEnable\":\"no\",\"rrsetorderDataId\":\"\",\"rrsetorderDisplay\":\"\",\"extensions\":[],\"dcObjectIds\":[],\"dcAclObjects\":[],\"secureActiveDirectoryEnable\":\"no\",\"rrSetOrderList\":[],\"serial_format\":\"DATE\",\"template_id\":\"\",\"addedARRs\":[],\"deletedARRs\":[],\"created_by\":\"22321\",\"zoneRR\":[],\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restricted Zone Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"organization_id\":\"\",\"name\":\"restrictpostman.com\",\"template_name\":\"PostmanZoneTemp\",\"importCloudRR\":true,\"description\":\"\",\"dnssec_enable\":\"no\",\"nsec_option\":\"NSEC3\",\"restrictedZone\":\"yes\",\"monitoringService\":\"yes\",\"dmzVisible\":\"no\",\"activeDirectoryEnable\":\"no\",\"rrsetorderDataId\":\"\",\"rrsetorderDisplay\":\"\",\"extensions\":[],\"dcObjectIds\":[],\"dcAclObjects\":[],\"secureActiveDirectoryEnable\":\"no\",\"rrSetOrderList\":[],\"serial_format\":\"DATE\",\"template_id\":\"\",\"addedARRs\":[],\"deletedARRs\":[],\"created_by\":\"22321\",\"zoneRR\":[],\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNSSEC Enabled Zone Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"organization_id\":\"\",\"name\":\"dnssecpostman.com\",\"template_name\":\"PostmanZoneTemp\",\"importCloudRR\":true,\"description\":\"\",\"dnssec_enable\":\"yes\",\"nsec_option\":\"NSEC3\",\"restrictedZone\":\"no\",\"monitoringService\":\"yes\",\"dmzVisible\":\"no\",\"activeDirectoryEnable\":\"no\",\"rrsetorderDataId\":\"\",\"rrsetorderDisplay\":\"\",\"extensions\":[],\"dcObjectIds\":[],\"dcAclObjects\":[],\"secureActiveDirectoryEnable\":\"no\",\"rrSetOrderList\":[],\"serial_format\":\"DATE\",\"template_id\":\"\",\"addedARRs\":[],\"deletedARRs\":[],\"created_by\":\"22321\",\"zoneRR\":[],\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restricted Zone Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"name\":\"restrictpostman.com\",\"organization_id\":\"\",\"organization_name\":\"EARTH\",\"activeDirectoryEnable\":\"no\",\"template_name\":\"PostmanZoneTemp\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/multidelete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"multidelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNSSEC Enabled Zone Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"name\":\"dnssecpostman.com\",\"organization_id\":\"\",\"organization_name\":\"EARTH\",\"activeDirectoryEnable\":\"no\",\"template_name\":\"PostmanZoneTemp\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/multidelete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"multidelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Zone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"postman.com\",\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/getZone",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"getZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mirror Zone Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mirrored_zone_list\":\"mirrorpostman.com\",\"mirror_name\":\"\",\"old_mirror_name\":\"\",\"description\":\"\",\"old_description\":\"\",\"org_name\":\"EARTH\",\"zone_name\":\"postman.com\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/mirroredzone/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"mirroredzone",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mirror Zone Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"zone_name\":\"postman.com\",\"org_name\":\"EARTH\",\"mirror_name\":\"mirrorpostman.com\",\"created_by_login_name\":\"twcadm\",\"updated_by_login_name\":\"twcadm\",\"created_time\":1551960392000,\"updated_time\":1551960432000,\"updated_time_string\":\"12:07:12 03-07-2019\",\"created_time_string\":\"12:06:32 03-07-2019\",\"description\":\"\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/mirroredzone/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"mirroredzone",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse zone RR add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\":\"revzonerr.postman.com\",\"rrclass\": \"IN\",\"rrtype\":\"PTR\",\"ttl\": 1200,\"data\": \"129.5.0.4\",\"description\":\"Reverse zone RR\", \"ipAddr\": \"129.5.0.4\",\"domain\":\"postman.com\",\"organization_name\":\"EARTH\",\"networkAddress\": \"129.5.0.0\",\"mask\":\"16\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/revzone/rr/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"revzone",
+						"rr",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse zone RR Traverse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"wsp02413790wss.apac.nsroot.net.\",\"domain_name\":\"10.in-addr.arpa\",\"organization_name\":\"EARTH\",\"rr_type\":\"PTR\",\"dnssec_enabled\":false,\"rr_value\": \"10.27.138.113\",\"isProxy\": 0}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proxy root zone RR Traverse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"ns1.finnet.bnb.bg.\",\"domain_name\":\".\",\"organization_name\":\"EARTH\",\"rr_type\":\"A\",\"dnssec_enabled\":false,\"rr_value\": \"\",\"isProxy\": 1}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkACNAMEconflict",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/rr/checkACNAMEconflict?org_name=EARTH&ownerName=AA.postman.com.&recordType=A",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"rr",
+						"checkACNAMEconflict"
+					],
+					"query": [
+						{
+							"key": "org_name",
+							"value": "EARTH"
+						},
+						{
+							"key": "ownerName",
+							"value": "AA.postman.com."
+						},
+						{
+							"key": "recordType",
+							"value": "A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"organization_id\":\"\",\"name\":\"postman.com\",\"template_name\":\"PostmanZoneTemp\",\"description\":\"\",\"dnssec_enable\":\"no\",\"nsec_option\":\"NSEC3\",\"restrictedZone\":\"no\",\"monitoringService\":\"yes\",\"dmzVisible\":\"no\",\"activeDirectoryEnable\":\"no\",\"rrsetorderDataId\":\"[]\",\"rrsetorderDisplay\":\"\",\"extensions\":[],\"dcObjectIds\":[],\"dcAclObjects\":[],\"secureActiveDirectoryEnable\":\"no\",\"rrSetOrderList\":[],\"serial_format\":\"DATE\",\"template_id\":\"\",\"addedARRs\":[],\"deletedARRs\":[],\"addedRRs\":[{\"owner\":\"object1.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"A\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"0\",\"status\":\"1\",\"data\":\"129.5.0.5\",\"extensions\":[]},{\"owner\":\"alias.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"CNAME\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"0\",\"status\":\"1\",\"data\":\"object1.postman.com.\",\"extensions\":[]},{\"owner\":\"object.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"MX\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"0\",\"status\":\"1\",\"data\":\"100 object1.postman.com.\",\"extensions\":[]},{\"owner\":\"myalias.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"CNAME\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"0\",\"status\":\"1\",\"data\":\"nusmwdc-dpoll02.nam.nsroot.net.\",\"extensions\":[]},{\"owner\":\"external.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"CNAME\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"1\",\"status\":\"1\",\"data\":\"citi-net.wlb3.nam.nsroot.net.\",\"extensions\":[]},{\"owner\":\"delegated.subdomain.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"A\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"0\",\"status\":\"1\",\"data\":\"129.5.0.6\",\"extensions\":[]},{\"owner\":\"mytxtrecotd.postman.com.\",\"rrclass\":\"IN\",\"rrtype\":\"TXT\",\"ttl\":\"1200\",\"description\":\"\",\"is_external_rr\":\"0\",\"status\":\"1\",\"data\":\"this is a test\",\"extensions\":[]}],\"deletedRRs\":[],\"old_name\":\"postman.com\",\"updated_by\":\"22321\",\"updateSubZone\":false,\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/update",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRAdd-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"obj.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"A\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"129.5.0.3\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRAdd-2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"objectcname.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"CNAME\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"TCPWave00005Remote.afcc.com.\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRAdd-3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"objectmxrec.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"MX\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"1 TCPWave00005Remote.afcc.com.\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRAdd-4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"TCPWave00005Remote.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"TXT\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"Object txt rec\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/add",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object RR traverse-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"type": "text",
+						"value": "{{TIMS-Session-Token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"TCPWave00005Remote.afcc.com.\",\"domain_name\":\"afcc.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"A\",\"dnssec_enabled\":false,\"rr_value\": \"129.5.0.3\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object RR traverse-2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"type": "text",
+						"value": "{{TIMS-Session-Token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"objectcname.afcc.com.\",\"domain_name\":\"afcc.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"CNAME\",\"dnssec_enabled\":false,\"rr_value\": \"129.5.0.3\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object RR traverse-3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"type": "text",
+						"value": "{{TIMS-Session-Token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"objectmxrec.afcc.com.\",\"domain_name\":\"afcc.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"MX\",\"dnssec_enabled\":false,\"rr_value\": \"129.5.0.3\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object RR traverse-4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"type": "text",
+						"value": "{{TIMS-Session-Token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"TCPWave00005Remote.afcc.com.\",\"domain_name\":\"afcc.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"TXT\",\"dnssec_enabled\":false,\"rr_value\": \"129.5.0.3\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRDelete-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"objectcname.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"CNAME\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"TCPWave00005Remote.afcc.com.\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRDelete-2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"obj.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"A\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"129.5.0.3\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRDelete-3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"objectmxrec.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"MX\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"1 TCPWave00005Remote.afcc.com.\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObjectRRDelete-4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"owner\": \"TCPWave00005Remote.afcc.com.\",\r\n\t\"rrclass\": \"IN\",\r\n\t\"rrtype\": \"TXT\",\r\n\t\"ttl\": 1200,\r\n\t\"data\": \"Object txt rec\",\r\n\t\"ipAddr\": \"129.5.0.3\",\r\n\t\"is_ad_rr\": 0,\r\n\t\"organization_name\": \"EARTH\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/rr/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"rr",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone RR Traverse-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"object1.postman.com.\",\"domain_name\":\"postman.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"A\",\"dnssec_enabled\":false}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone RR Traverse-2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"alias.postman.com.\",\"domain_name\":\"postman.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"CNAME\",\"dnssec_enabled\":false}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone RR Traverse-3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"object.postman.com.\",\"domain_name\":\"postman.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"MX\",\"dnssec_enabled\":false}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone RR Traverse-4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"myalias.postman.com.\",\"domain_name\":\"postman.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"CNAME\",\"dnssec_enabled\":false}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone RR Traverse-5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"external.postman.com.\",\"domain_name\":\"postman.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"CNAME\",\"dnssec_enabled\":false}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone RR Traverse-6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rr_name\":\"mytxtrecotd.postman.com.\",\"domain_name\":\"postman.com\",\"organization_name\":\"EARTH\",\"rr_type\":\"TXT\",\"dnssec_enabled\":false}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnstools/traverseRR",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnstools",
+						"traverseRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"name\":\"postman.com\",\"organization_id\":\"\",\"organization_name\":\"EARTH\",\"activeDirectoryEnable\":\"no\",\"template_name\":\"PostmanZoneTemp\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/zone/multidelete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"zone",
+						"multidelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zone Template Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"template_name\":\"PostmanZoneTemp\",\"organization_id\":\"\",\"organization_name\":\"EARTH\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/templates/delete/names",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"templates",
+						"delete",
+						"names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Server Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\",\"address\":\"129.5.0.3\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dnsserver/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dnsserver",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subnet Edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"subnet\":{\"name\":\"PostmanSubnet\",\"location_id\":null,\"subnet_group_id\":null,\"vlan_id\":\"\",\"vrf_name\":\"None\",\"sharedNetwork\":\"None\",\"dhcpFailoverPeer\":\"\",\"discovery_template\":null,\"enable_discovery\":\"no\",\"reclaim_objects\":\"no\",\"schedule_reclaim\":\"no\",\"description\":\"Updated\",\"primary_domain\":\"afcc.com\",\"routerAddress\":\"129.5.0.1\",\"organization_name\":\"EARTH\",\"primary_dhcp_server_address\":\"None\",\"template_name\":\"None\",\"dns_appliances\":\"None\",\"extensions\":[]},\"address\":[\"129.5.0.0\"]}"
+				},
+				"url": {
+					"raw": "{{base-url}}/subnet/edit",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"subnet",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DHCP Server Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\",\"address\":\"129.5.0.3\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/dhcpserver/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"dhcpserver",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DHCP Option Temp Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"template_id\":\"\",\"organization_name\":\"PostmanOrg\",\"template_name\":\"postmandhcptemp\",\"entity_type_code\":\"O\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/templates/delete/dhcpTmpl",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"templates",
+						"delete",
+						"dhcpTmpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DHCP Policy Template Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"template_id\":\"\",\"organization_name\":\"PostmanOrg\",\"entity_type_code\":\"P\",\"template_name\":\"postmanpolicy\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/templates/delete/dhcpTmpl",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"templates",
+						"delete",
+						"dhcpTmpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Multiple Objects",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"subnet_id\":\"\",\"addressArray\":[\"129.5.0.3\"],\"updated_by\":\"22321\",\"routersArray\":[],\"organization_name\":\"EARTH\",\"isDeleterrsChecked\":1}"
+				},
+				"url": {
+					"raw": "{{base-url}}/object/delete-multiple",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"object",
+						"delete-multiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subnet Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"addressList\":[\"129.5.0.0/16\"],\"organizationName\":\"EARTH\",\"isDeleterrsChecked\":1}"
+				},
+				"url": {
+					"raw": "{{base-url}}/subnet/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"subnet",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "associated-servers-check",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\",\"address\":\"129.5.0.0\",\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/network/associated-servers-check",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"network",
+						"associated-servers-check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\",\"address\":\"129.5.0.0\",\"organization_name\":\"EARTH\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/network/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"network",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Domain Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":\"\",\"name\":\"postmandomain.com\",\"old_name\":null,\"description\":\"updated\",\"zone_id\":0,\"updateSubDomain\":false,\"created_by\":22321,\"created_by_name\":\"TCPWave Internal, Functional\",\"created_time\":1586175543000,\"updated_by\":22321,\"updated_by_name\":\"TCPWave Internal, Functional\",\"updated_time\":1586175556000,\"is_managed\":\"No\",\"firstName\":null,\"lastName\":null,\"contact_email\":null,\"organization_id\":\"\",\"organization_name\":\"PostmanOrg\",\"restrictedDomain\":\"no\",\"object_address\":null,\"expiration_time\":null,\"contact_phone\":null,\"updated_time_string\":\"12:19:16 04-06-2020\",\"created_time_string\":\"12:19:03 04-06-2020\",\"created_by_login_name\":\"twcadm\",\"updated_by_login_name\":\"twcadm\"}]"
+				},
+				"url": {
+					"raw": "{{base-url}}/domain/multidelete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"domain",
+						"multidelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organization Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TIMS-Session-Token",
+						"value": "{{TIMS-Session-Token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"PostmanOrg\"}"
+				},
+				"url": {
+					"raw": "{{base-url}}/organization/delete",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"organization",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

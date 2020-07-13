@@ -1,0 +1,21 @@
+{
+	"id": "5f09ac94-5d64-4517-ba42-0291c4c91f54",
+	"name": "Environment setup file",
+	"values": [
+		{
+			"key": "TIMS-Session-Token",
+			"value": "44be9926-42d9-423d-acfc-27047bf71137",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "base-url",
+			"value": "https://www.tcpwave.com:7443/tims/rest",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-02-25T13:53:51.571Z",
+	"_postman_exported_using": "Postman/6.7.3"
+}
