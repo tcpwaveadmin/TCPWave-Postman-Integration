@@ -32,5 +32,5 @@ TCPWave uses the Postman tool over other RESTful API testing tools because of th
 ### Sample Get Call  
  ![](images/getCallExample.png)
  
-### Sample Get Call  
+### Sample Post Call  
  ![](images/postCallExample.png)
