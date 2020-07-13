@@ -22,7 +22,7 @@ TCPWave uses the Postman tool over other RESTful API testing tools because of th
 1. Import JSON environment file. You can declare global variables in that file.
 
 2. The imported global variables are as shown:
-   ![](images/global.png)
+   ![](images/globalopt.png)
 
 3. TCPWave uses Token-Based Authentication to execute the rest calls from postman.
 
