@@ -16,3 +16,11 @@ TCPWave uses the Postman tool over other RESTful API testing tools because of th
 •	Debugging - Postman console helps to check what data has been retrieved making it easy to debug tests.
 
 •	Continuous Integration - With its ability to support continuous integration, development practices are maintained.
+
+### working with collection files
+1. Import JSON environment file. You can declare global variables in that file.
+2. The imported global variables are as shown:
+   ![](images/global.png)
+
+
+![](images/getCallExample.png)
