@@ -1,9 +1,9 @@
 # TCPWave-Postman-Integration
 TCPWave uses the Postman tool over other RESTful API testing tools because of the following:
 
-• ## Accessibility - To use Postman, you are required to log-in to the respective accounts making it easy to access files anytime, anywhere if a Postman application is installed on the computer.
+• Accessibility - To use Postman, you are required to log-in to the respective accounts making it easy to access files anytime, anywhere if a Postman application is installed on the computer.
 
-•	## Use of Collections - Postman lets users create collections for their API calls. Each collection can create subfolders and multiple requests. This helps in organizing your test suites.
+•	Use of Collections - Postman lets users create collections for their API calls. Each collection can create subfolders and multiple requests. This helps in organizing your test suites.
 
 •	Collaboration - Collections and environments can be imported or exported making it easy to share files. A direct link can also be used to share collections.
 
